@@ -2,14 +2,49 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  
+  <!-- Custom Design Rules Go Here -->
+  <style>
+    /* 1. Change the background color of the whole page to a soft gray-blue */
+    body {
+      background-color: #f0f4f8; 
+    }
+
+    /* 2. Turn the main text area into a clean white "card" */
+    main {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px; /* Rounds the corners of the card */
+      margin-top: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Adds a soft drop shadow */
+    }
+
+    /* 3. Give the main heading a specific color */
+    h1 {
+      color: #0056b3; 
+    }
+
+    /* 4. Fix the image size and make it look professional */
+    img {
+      max-width: 50%; /* Forces the image to only take up half the screen width */
+      min-width: 300px; /* Ensures it doesn't get too tiny on mobile phones */
+      border-radius: 8px; /* Slightly rounds the image corners */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Adds a shadow behind the image */
+      display: block; /* This rule... */
+      margin: 30px auto; /* ...combined with this rule centers the image perfectly */
+    }
+  </style>
+
 </head>
 <body>
   <main class="container">
     <h1>Lesson 1: Basic Circuits</h1>
-    <p>Today we are learning about Ohm's Law.</p>
+    <p>Today we are learning about Ohm's Law. Here is the schematic we will be building:</p>
     
-    <!-- A link to go back to the homepage -->
-    <a href="index.html">⬅ Back to Home</a>
+    <img src="CamScanner-08-27-2026-22.32_page-0001" alt="Schematic of a basic circuit">
+    
+    <br>
+    <a href="index.html" role="button" class="secondary">⬅ Back to Home</a>
   </main>
 </body>
 </html>
