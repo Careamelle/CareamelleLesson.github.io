@@ -1,39 +1,130 @@
-<h1>Welcome to My Lessons</h1>
 <!DOCTYPE html>
-<html>
+<!-- The data-theme="dark" forces Pico to use its dark mode settings -->
+<html data-theme="dark">
 <head>
-  <!-- This single line imports a beautiful, modern design -->
+  <!-- Imports Pico CSS for structure -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  
+  <!-- Imports custom tech fonts from Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    /* 1. Base Theme Colors & Grid Background */
+    body {
+      background-color: #0d1117; /* Deep tech black/blue */
+      /* Creates a subtle grid pattern that looks like a breadboard or blueprint */
+      background-image: 
+        linear-gradient(rgba(0, 255, 204, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 204, 0.07) 1px, transparent 1px);
+      background-size: 25px 25px;
+      font-family: 'Inter', sans-serif; /* Clean readable font for main text */
+    }
+
+    /* 2. Electronics / Digital Typography */
+    h1, h2, h3 {
+      font-family: 'Share Tech Mono', monospace; /* Digital/tech font */
+      color: #00ffcc; /* Neon LED Cyan */
+      text-transform: uppercase;
+      text-shadow: 0 0 8px rgba(0, 255, 204, 0.3); /* Subtle glow effect */
+      letter-spacing: 1px;
+    }
+
+    /* 3. Hardware Component Styling (Cards) */
+    article {
+      background-color: #161b22; /* Slightly lighter dark panel */
+      border: 1px solid #30363d;
+      border-left: 4px solid #00ffcc; /* Acts like a PCB trace line */
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+    }
+
+    /* 4. Glowing Buttons */
+    a[role="button"] {
+      background-color: transparent;
+      color: #00ffcc;
+      border: 1px solid #00ffcc;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: bold;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 5px rgba(0, 255, 204, 0.1);
+    }
+
+    /* Makes the button glow when hovered over */
+    a[role="button"]:hover {
+      background-color: #00ffcc;
+      color: #000; /* Black text on hover */
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+    }
+
+    /* 5. Instructor Profile Setup */
+    .instructor-profile {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 2px solid #00ffcc; /* Neon ring around your photo */
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
+      object-fit: cover;
+      margin: 0;
+    }
+
+    .instructor-text p {
+      color: #8b949e;
+    }
+
+    @media (max-width: 600px) {
+      .instructor-profile {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="container">
-    <h1>Welcome to My Electronics Class</h1>
-    <p>This website holds all of our lesson materials.</p>
     
-    <!-- This is a link. The href points to the exact name of your second file -->
-    <a href="lesson1.html" role="button">Go to Lesson 1: Basic Circuits</a>
+    <!-- HEADER -->
+    <h1 style="text-align: center; margin-bottom: 50px;">
+      &lt;SYS.INIT&gt;<br>Electronics Engineering
+    </h1>
+
+    <!-- INSTRUCTOR CARD -->
+    <article>
+      <div class="instructor-profile">
+        <!-- Remember to upload profile-pic.jpg to GitHub! -->
+        <img src="profile-pic.jpg" alt="Instructor Photo" class="profile-img">
+        
+        <div class="instructor-text">
+          <h2 style="margin-bottom: 0;">Carmel Angelo N. Hervera</h2>
+          <p style="color: #00ffcc; font-family: 'Share Tech Mono', monospace; margin-bottom: 10px;">
+            > Sorsogon State University
+          </p>
+          <p style="margin-bottom: 5px;">
+            <strong>[Field Exp]:</strong> On-Call CCTV & Solar Technician at Lightzone
+          </p>
+          <p style="margin-bottom: 0; font-size: 0.9em; font-style: italic;">
+            "Bridging the gap between theoretical circuit analysis and hands-on hardware implementation."
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- LESSONS DIRECTORY -->
+    <article>
+      <h3>Available Modules</h3>
+      <p>Select a lesson below to access course materials, circuit diagrams, and assignments.</p>
+      
+      <!-- Button to Lesson 1 -->
+      <a href="lesson1.html" role="button">Run Module: Lesson 1</a>
+    </article>
+
   </main>
 </body>
 </html>
-<img src="CamScanner-08-27-2026-22.32_page-0001.jpg" alt="My Credentials sheesh">
-
-<!-- ABOUT THE INSTRUCTOR CARD -->
-<article>
-  <div class="instructor-profile">
-    <!-- Replace 'profile-pic.jpg' with an actual photo of yourself later -->
-    <img src="profile-pic.png" alt="Photo of the Instructor" class="profile-img">
-    
-    <div>
-      <h2 style="margin-bottom: 0;">Carmel Angelo N. Hervera</h2>
-      <p style="color: #666; font-weight: bold; margin-bottom: 10px;">
-        Electronics Engineering, Sorsogon State University
-      </p>
-      <p style="margin-bottom: 0;">
-        <strong>Field Experience:</strong> On-Call CCTV & Solar Technician at Lightzone
-      </p>
-      <p style="margin-bottom: 0; font-size: 0.9em;">
-        <em>Welcome to the class! I've designed these materials to combine theoretical engineering concepts with real-world, hands-on applications.</em>
-      </p>
-    </div>
-  </div>
-</article>
