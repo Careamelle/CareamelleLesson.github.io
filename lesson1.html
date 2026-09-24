@@ -1,50 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
 <head>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   
-  <!-- Custom Design Rules Go Here -->
   <style>
-    /* 1. Change the background color of the whole page to a soft gray-blue */
+    /* 1. Deep purple background with circuit-grid pattern */
     body {
-      background-color: #f0f4f8; 
+      background-color: #3b0a66; 
+      background-image: 
+        linear-gradient(rgba(138, 43, 226, 0.2) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(138, 43, 226, 0.2) 1px, transparent 1px);
+      background-size: 30px 30px;
+      font-family: 'Inter', sans-serif;
     }
 
-    /* 2. Turn the main text area into a clean white "card" */
-    main {
-      background-color: white;
-      padding: 30px;
-      border-radius: 12px; /* Rounds the corners of the card */
-      margin-top: 40px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Adds a soft drop shadow */
-    }
-
-    /* 3. Give the main heading a specific color */
+    /* 2. 8-Bit Title styling with thick yellow outline */
     h1 {
-      color: #0056b3; 
+      font-family: 'Press Start 2P', cursive;
+      color: #7b2cbf;
+      -webkit-text-stroke: 2px #ffde00; 
+      text-shadow: 4px 4px 0px #ffde00;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      line-height: 1.5;
     }
 
-    /* 4. Fix the image size and make it look professional */
-    img {
-      max-width: 50%; /* Forces the image to only take up half the screen width */
-      min-width: 300px; /* Ensures it doesn't get too tiny on mobile phones */
-      border-radius: 8px; /* Slightly rounds the image corners */
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Adds a shadow behind the image */
-      display: block; /* This rule... */
-      margin: 30px auto; /* ...combined with this rule centers the image perfectly */
+    /* 3. Pill-shaped content boxes */
+    article {
+      background-color: #f4f4f8; 
+      color: #2d004b;
+      border-radius: 30px;
+      border: 4px solid #7b2cbf;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    h2, h3 {
+      color: #5a189a;
+      font-weight: 600;
+    }
+
+    /* 4. Glowing interactive buttons */
+    a[role="button"] {
+      background-color: #7b2cbf;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 4px 0px #2a004e;
+      transition: all 0.2s;
+      display: inline-block;
+      text-align: center;
+    }
+
+    a[role="button"]:hover {
+      background-color: #ffde00;
+      color: #3b0a66;
+      box-shadow: 0 4px 0px #ccb200;
+      transform: translateY(2px);
+    }
+
+    /* 5. Formula Highlight Box */
+    .formula-box {
+      background-color: #e0d4fc;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      font-family: 'Press Start 2P', cursive;
+      color: #3b0a66;
+      font-size: 1.2em;
+      margin: 20px 0;
+      border: 2px dashed #7b2cbf;
+    }
+
+    /* 6. Image Styling */
+    img.lesson-image {
+      max-width: 80%;
+      border-radius: 15px;
+      border: 4px solid #7b2cbf;
+      display: block;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    
+    /* 7. Centering container for buttons */
+    .button-container {
+      text-align: center;
+      margin-top: 20px;
     }
   </style>
-
 </head>
 <body>
   <main class="container">
-    <h1>Lesson 1: Basic Circuits</h1>
-    <p>Today we are learning about Ohm's Law. Here is the schematic we will be building:</p>
     
-    <img src="CamScanner-08-27-2026-22.32_page-0001.jpg" alt="Schematic of a basic circuit">
-    
-    <br>
-    <a href="index.html" role="button" class="secondary">⬅ Back to Home</a>
+    <!-- HEADER -->
+    <h1>LESSON 1:<br>BASIC CIRCUITS</h1>
+
+    <!-- MAIN LESSON CONTENT -->
+    <article>
+      <h3>Ohm's Law</h3>
+      <p>Today we are looking at the fundamental relationship between voltage, current, and resistance in a basic electrical circuit.</p>
+      
+      <!-- Formula Highlight Box -->
+      <div class="formula-box">
+        V = I × R
+      </div>
+      
+      <p>Below is the schematic we will be analyzing for today's laboratory exercise:</p>
+      
+      <!-- Lesson Image -->
+      <img src="circuit-diagram.jpg" alt="Schematic of a basic circuit" class="lesson-image">
+    </article>
+
+    <!-- ASSIGNMENT SUBMISSION AREA -->
+    <article style="text-align: center; border-color: #ffde00; background-color: #fffde6;">
+      <h3>Task Submission</h3>
+      <p>Once you have completed your circuit analysis calculations, scan your document as a PDF and upload it below.</p>
+      
+      <!-- Replace YOUR_GOOGLE_FORM_LINK_HERE with your actual form link -->
+      <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" role="button" style="background-color: #ffde00; color: #3b0a66; box-shadow: 0 4px 0px #ccb200;">
+        Submit Assignment
+      </a>
+    </article>
+
+    <!-- BACK TO HOME NAVIGATION -->
+    <div class="button-container">
+      <a href="index.html" role="button" style="background-color: #5a189a; padding: 10px 30px;">
+        ⬅ Return to Main Menu
+      </a>
+    </div>
+
   </main>
 </body>
 </html>
